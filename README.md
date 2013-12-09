@@ -9,3 +9,4 @@ we decided to make one ourselves.
 Brew Duck offers brewing calculater that is easy to use as well as a platform
 
 where brewers can share their own recipes.
+
