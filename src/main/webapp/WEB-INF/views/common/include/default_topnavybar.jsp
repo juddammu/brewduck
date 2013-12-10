@@ -112,7 +112,7 @@
                         <div class="user-details">
                             <div class="username">
                                 <span class="badge badge-important">3</span>
-                                John <span class="bold">Smith</span>
+                                 <span class="bold">홍</span> 길동
                             </div>
                         </div>
                         <div class="iconset top-down-arrow"></div>

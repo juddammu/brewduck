@@ -21,9 +21,9 @@
     <!-- BEGIN SIDEBAR MENU -->
     <p class="menu-title">BROWSE <span class="pull-right"><a href="javascript:;"><i class="icon-refresh"></i></a></span></p>
     <ul>
-        <li class="start active "> <a href="index.html"> <i class="icon-custom-home"></i> <span class="title">홈</span> <span class="selected"></span> <span class="badge badge-important pull-right">5</span></a> </li>
-        <li class=""> <a href="email.html"> <i class="icon-envelope"></i> <span class="title">브루어</span>  <span class=" badge badge-disable pull-right ">203</span></a> </li>
-        <li class=""> <a href="charts.html"> <i class="icon-custom-chart"></i> <span class="title">계산기</span> </a> </li>
+        <li class="start active "> <a href="/"> <i class="icon-custom-home"></i> <span class="title">홈</span> <span class="selected"></span> <span class="badge badge-important pull-right">5</span></a> </li>
+        <li class=""> <a href="#"> <i class="icon-envelope"></i> <span class="title">브루어</span>  <span class=" badge badge-disable pull-right ">203</span></a> </li>
+        <li class=""> <a href="#"> <i class="icon-custom-chart"></i> <span class="title">계산기</span> </a> </li>
         <li class=""> <a href="javascript:;"> <i class="icon-custom-extra"></i> <span class="title">모든 레시피</span> <span class="arrow "></span> </a>
             <ul class="sub-menu">
                 <li > <a href="/recipe/style"> 스타일 </a> </li>

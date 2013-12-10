@@ -207,7 +207,7 @@ Page sidebar
 }
 .page-sidebar ul.folders{
 	list-style:none;
-	margin:0px;
+	margin:0 px;
 }
 .page-sidebar ul.folders> li {
 	   border: 0 none;

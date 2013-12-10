@@ -21,8 +21,8 @@
                                 <input type="checkbox" value="1" id="checkbox1">
                                 <label for="checkbox1"></label>
                             </div></th>
-                            <th width="20%">Name</th>
-                            <th width="6%" data-hide="phone,tablet">OG</th>
+                            <th width="20%">이름</th>
+                            <th width="6%" >OG</th>
                             <th width="6%">FG</th>
                             <th width="6%" data-hide="phone,tablet">IBU</th>
                             <th width="6%" data-hide="phone,tablet">°L</th>
@@ -39,13 +39,13 @@
                             <td valign="middle"><c:out value="${result.koreanName}"/> (<c:out value="${result.name}"/>)</td>
                             <td valign="middle"><c:out value="${result.ogMin}"/> </td>
                             <td valign="middle"><c:out value="${result.fgMin}"/></td>
-                            <td valign="middle"><c:out value="${result.ibuMin}"/></td>
-                            <td valign="middle">
+                            <td valign="middle" data-hide="phone,tablet"><c:out value="${result.ibuMin}"/></td>
+                            <td valign="middle" data-hide="phone,tablet">
                                 <div class="progress progress-danger">
                                     <div data-percentage="<c:out value="${result.colorMin}"/>%" id="project-progress" style="width: 10%;" class="bar"></div>
                                 </div>
                                 </td>
-                            <td valign="middle">- </td>
+                            <td valign="middle" data-hide="phone,tablet">- </td>
                         </tr>
                         </c:forEach>
                         </tbody>
