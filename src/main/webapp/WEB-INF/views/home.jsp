@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-
 <div id="container">
 <div class="row-fluid spacing-bottom 2col">
     <div class="span3 ">
@@ -175,75 +174,7 @@
         </div>
     </div>
 </div>
-<div class="row-fluid spacing-bottom">
-    <div class="span12 tiles grey ">
-        <div class="no-margin-grid">
-            <div class="row-fluid">
-                <div class="tiles white span8">
-                    <div class="tiles-body">
-                        <div class="no-margin-grid">
-                            <div class="row-fluid">
-                                <div class="span6">
-                                    <div class="mini-chart-wrapper">
-                                        <div class="chart-details-wrapper">
-                                            <div class="chartname">
-                                                신규 맥주들
-                                            </div>
-                                            <div class="chart-value">
-                                                17,555
-                                            </div>
-                                        </div>
-                                        <div class="mini-chart">
-                                            <div id="mini-chart-orders"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="span6">
-                                    <div class="mini-chart-wrapper">
-                                        <div class="chart-details-wrapper">
-                                            <div class="chartname">
-                                                나의 맥주들
-                                            </div>
-                                            <div class="chart-value">
-                                                12
-                                            </div>
-                                        </div>
-                                        <div class="mini-chart">
-                                            <div id="mini-chart-other" ></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-                    <br>
-                    <div id="ricksaw" ></div>
-
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span4">
-                    <div class="tiles grey ">
-                        <div class="tiles white no-margin">
-                            <div class="tiles-body">
-                                <div class="tiles-title blend">
-                                    OVERALL VIEWS
-                                </div>
-                                <div class="heading">
-                                    <span data-animation-duration="1000" data-value="432852" class="animate-number">0</span>
-                                </div>
-                                44% higher <span class="blend">than last month</span>
-                            </div>
-                        </div>
-                        <div id="legend"></div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="row-fluid ">
     <div class="span8">
         <div class="tiles white">
@@ -331,34 +262,6 @@
 </div>
 </div>
 <div class="span4">
-    <div class="row-fluid spacing-bottom ">
-        <div class="span12">
-            <div class="tiles white added-margin">
-                <div class="tiles-body">
-                    <div class="controller">
-                        <a href="javascript:;" class="reload"></a>
-                        <a href="javascript:;" class="remove"></a>
-                    </div>
-                    <div class="tiles-title">
-                        한국의 브루잉 라이브
-                    </div>
-                    <div class="heading text-black ">
-                        120
-                    </div>
-                    <div class="progress  progress-small no-radius progress-success">
-                        <div class="bar animate-progress-bar" data-percentage="25%" ></div>
-                    </div>
-                    <div class="description">
-                        <span class="mini-description"><span class="text-black">2,000명이</span> <span class="text-black">3,824개의</span> 브루잉</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tiles white added-margin">
-                <div id="chart">
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="row-fluid">
         <div class="span12">
             <div class="widget">
@@ -469,4 +372,3 @@
 </div>
 </div>
 <!-- END PAGE -->
-</div>

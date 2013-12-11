@@ -9,8 +9,8 @@ $(document).ready(function() {
 		height: '150px',
 		alwaysVisible: false
 	});
-	loadServerChart();
-	loadSampleChart();
+	//loadServerChart();
+	//loadSampleChart();
 	
 function loadServerChart(){
 	var seriesData = [ [], []];

@@ -31,7 +31,11 @@ import java.io.IOException;
 
 
 /**
- * The Class AccountController.
+ * Created with IntelliJ IDEA.
+ * User: HUKORU - 임세환
+ * Date: 13. 12. 11
+ * Time: 오후 1:01
+ * To change this template use File | Settings | File Templates.
  */
 @Controller
 @RequestMapping(value = "/account")

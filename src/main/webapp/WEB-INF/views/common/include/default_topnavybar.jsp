@@ -1,7 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<!-- BEGIN HEADER -->
 <div class="header navbar navbar-inverse ">
     <!-- BEGIN TOP NAVIGATION BAR -->
     <div class="navbar-inner">
@@ -112,7 +109,7 @@
                         <div class="user-details">
                             <div class="username">
                                 <span class="badge badge-important">3</span>
-                                 <span class="bold">홍</span> 길동
+                                John <span class="bold">Smith</span>
                             </div>
                         </div>
                         <div class="iconset top-down-arrow"></div>
@@ -158,4 +155,3 @@
     </div>
     <!-- END TOP NAVIGATION BAR -->
 </div>
-<!-- END HEADER -->

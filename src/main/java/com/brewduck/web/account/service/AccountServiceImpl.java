@@ -23,6 +23,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * Created with IntelliJ IDEA.
+ * User: HUKORU - 임세환
+ * Date: 13. 12. 11
+ * Time: 오후 1:01
+ * To change this template use File | Settings | File Templates.
+ */
 @Service("accountService")
 public class AccountServiceImpl implements AccountService {
     Logger logger = LoggerFactory.getLogger(this.getClass());

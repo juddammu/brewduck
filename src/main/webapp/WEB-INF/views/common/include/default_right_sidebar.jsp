@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!-- BEGIN CHAT -->
 <div id="sidr">
     <div class="chat-window-wrapper">
         <div class="chat-header">
@@ -117,4 +116,3 @@
         </div>
     </div>
 </div>
-<!-- END CHAT -->
