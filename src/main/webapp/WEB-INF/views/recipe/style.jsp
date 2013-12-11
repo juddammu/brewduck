@@ -2,7 +2,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
+<script>
+    $(document).ready(function() {
+        $('.tip').tooltip();
+    });
+</script>
 
 
 <div class="row-fluid">
@@ -22,7 +26,10 @@
                                 <label for="checkbox1"></label>
                             </div></th>
                             <th width="20%">이름</th>
-                            <th width="6%" >OG</th>
+                            <th width="6%" >
+
+                                <button type="button" class="btn btn-white tip" data-toggle="tooltip" title="OG (Orignal Gravity) : 초기 비중" >OG</button>
+                            </th>
                             <th width="6%">FG</th>
                             <th width="6%" data-hide="phone,tablet">IBU</th>
                             <th width="6%" data-hide="phone,tablet">°L</th>
