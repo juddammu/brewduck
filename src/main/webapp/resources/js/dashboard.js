@@ -199,7 +199,7 @@ $('#world-map').vectorMap({
         scale: [3, 7],
         values: cityAreaData
       }]
-    },
+    }
   });
   
  $('.todo-list').click(function () {

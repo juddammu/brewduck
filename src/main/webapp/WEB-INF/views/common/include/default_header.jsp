@@ -71,7 +71,6 @@
     <!-- END PAGE LEVEL PLUGINS -->
 
     <!-- PAGE JS -->
-    <script src="/resources/js/dashboard.js" type="text/javascript"></script>
     <!-- BEGIN CORE TEMPLATE JS -->
     <script src="/resources/js/core.js" type="text/javascript"></script>
     <script src="/resources/js/demo.js" type="text/javascript"></script>

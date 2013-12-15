@@ -372,3 +372,5 @@
 </div>
 </div>
 <!-- END PAGE -->
+
+<script src="/resources/js/dashboard.js" type="text/javascript"></script>
