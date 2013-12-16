@@ -19,7 +19,12 @@ public class StyleDaoImpl implements StyleDao {
 
 	@Override
     public List<Style> getSelectList(Style style) {
-		return sqlSession.selectList("Style.selectList", style);
+		return sqlSession.selectList("Style.selectStyleList", style);
 	}
+
+    @Override
+    public Style getSelectStyleView(Style style) {
+        return sqlSession.selectOne("Style.selectStyleView", style);
+    }
 
 }

@@ -1,17 +1,11 @@
 $(document).ready(function() {	
 	var graph;
 	var rick;
-	$('#groups-list').slimScroll({
-		height: '90px',
-		alwaysVisible: false
-	});
-	$('#favourites-list').slimScroll({
-		height: '150px',
-		alwaysVisible: false
-	});
-	//loadServerChart();
-	//loadSampleChart();
+	loadServerChart();
+	loadSampleChart();
+	loadAnimatedWeatherIcons();
 	
+//Ricksaw Chart for Server Load - Autoupdate
 function loadServerChart(){
 	var seriesData = [ [], []];
 	var random = new Rickshaw.Fixtures.RandomData(50);
@@ -47,6 +41,8 @@ function loadServerChart(){
 
 	},1000);
 }
+
+//Ricksaw Chart Sample 
 function loadSampleChart(){
 var seriesData = [ [], [],[]];
 	var random = new Rickshaw.Fixtures.RandomData(50);
@@ -121,7 +117,8 @@ var seriesData = [ [], [],[]];
 		legend: legend
 	} );	
 }
-  
+
+//Jquery vector map
 var cityAreaData = [
         500.70,
         410.16,
@@ -199,13 +196,15 @@ $('#world-map').vectorMap({
         scale: [3, 7],
         values: cityAreaData
       }]
-    }
+    },
   });
   
- $('.todo-list').click(function () {
-	$(this).parent().children('label').toggleClass('done');
-});
-
+	//Simple todolist
+	 $('.todo-list').click(function () {
+		$(this).parent().children('label').toggleClass('done');
+	});
+	
+	//Pie Charts
     $('#easy-pie-custom1').easyPieChart({
        barColor:'#02679a',
 	   trackColor:'#fff',
@@ -223,7 +222,8 @@ $('#world-map').vectorMap({
 	   lineWidth:'10',
 	   	   size:'70'
     });
- 
+	
+	//Sparkline Charts
 	$("#mini-chart-orders").sparkline([1,4,6,2,0,5,6,4,6], {
     type: 'bar',
     height: '30px',
@@ -231,7 +231,7 @@ $('#world-map').vectorMap({
     barSpacing: 2,
     barColor: '#f35958',
     negBarColor: '#f35958'});
-
+	//Sparkline Charts
 	$("#mini-chart-other").sparkline([1,4,6,2,0,5,6,4], {
     type: 'bar',
     height: '30px',
@@ -241,13 +241,12 @@ $('#world-map').vectorMap({
     negBarColor: '#0aa699'});	
 });
 
-
-//var plot = $.plotAnimator("#placeholder",[data: d2, animator: {steps: 136, duration: 500, start:0}],options);
-
-
-/*** Animated Weather Icon **/
-var icons = new Skycons({"color": "white"});
-icons.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
-icons.set("rain", Skycons.RAIN);
-icons.set("wind", Skycons.WIND);
-icons.play();
+//Weahter Icons 
+function loadAnimatedWeatherIcons(){
+	/*** Animated Weather Icon **/
+	var icons = new Skycons({"color": "white"});
+	icons.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
+	icons.set("rain", Skycons.RAIN);
+	icons.set("wind", Skycons.WIND);
+	icons.play();
+}

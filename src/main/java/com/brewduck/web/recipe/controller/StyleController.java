@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.brewduck.web.domain.Style;
@@ -29,10 +30,10 @@ public class StyleController {
 
 
     /**
-     * 스타일 index
+     * 스타일 index page
      */
     @RequestMapping(value = "/style", method = RequestMethod.GET)
-    public String style(Model model) {
+    public String index(Model model) {
         Style style = new Style();
         style.setId(1);
 
@@ -43,5 +44,22 @@ public class StyleController {
 
         return "/recipe/style";
     }
+
+    /**
+     * 스타일 뷰
+     */
+    @RequestMapping(value = "/style/{name}", method = RequestMethod.GET)
+    public String style(@PathVariable("name") String name, Model model) {
+        Style style = new Style();
+
+        logger.info("name : " + name);
+        style.setName(name);
+
+        styleService.selectStyleView(style);
+        model.addAttribute("style", style);
+
+        return "/recipe/style_view";
+    }
+
 }
 

@@ -8,4 +8,5 @@ public interface StyleDao {
 
     public List<Style> getSelectList(Style style);
 
+    public Style getSelectStyleView(Style style);
 }

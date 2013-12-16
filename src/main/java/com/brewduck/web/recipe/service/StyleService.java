@@ -12,4 +12,6 @@ import java.util.List;
 
 public interface StyleService {
 	List<Style> getSelectList(Style style);
+
+    public Style selectStyleView(Style style) throws RuntimeException;
 }

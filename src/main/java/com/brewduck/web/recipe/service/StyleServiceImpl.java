@@ -21,5 +21,9 @@ public class StyleServiceImpl implements StyleService {
 	public List<Style> getSelectList(Style style) {
 		return styleDao.getSelectList(style);
 	}
-	
+
+    @Override
+    public Style selectStyleView(Style style) {
+        return styleDao.getSelectStyleView(style);
+    }
 }

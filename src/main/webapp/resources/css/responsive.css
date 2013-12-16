@@ -3,8 +3,16 @@
 and (min-width : 1824px) {	
 	body { 
 		 font-size:14px;
-
+		 height:100%;
 	}
+	.page-container{
+		height:auto;
+	}
+	/** Side bar widget **/
+	.footer-widget{
+		position:fixed;
+	}
+	/** Tables **/
 	.table th{
 		font-size:14px;
 	}
@@ -14,24 +22,25 @@ and (min-width : 1824px) {
 	}	
 	
 	.table td.small-cell, .table th.small-cell{
-		width: 23px;
+		width: 42px;
 	}
-	
-	.footer-widget{
-		position:fixed;
-	}
-	
+	/** Controls **/
 	.checkbox label:before {
 		top:0.5px;
 	}
-	
+	/** Tiles **/
 	.tiles.margin-reset{
 		 margin-left: 51px;
 	}
-	
+	/** Only Demo Purpose **/
 	.demo-map{
 		min-height:920px;
 	}
+	
+	.error-main{
+		margin-top:40%;
+	}
+
 }
 
 
@@ -54,7 +63,7 @@ and (min-width : 1824px) {
   	/*** Page content ***/
   	.page-content { 
   		margin-left: 250px; 
-		margin-top: 58px;
+		min-height: 1006px;
 	}
 
 	.page-content.no-min-height {
@@ -67,7 +76,11 @@ and (min-width : 1824px) {
 	
 	.inner-menu{
 		margin-left:50px;
-		margin-top: 60px;
+		padding-top: 60px;
+	}
+	/** Const size button for medium devices **/
+	.btn-cons-md{
+		  min-width: 120px;
 	}
 }
 
@@ -107,26 +120,22 @@ and (min-width : 1824px) {
 
 	/*** Page content ***/
   	.page-content {			
-		margin-top:58px !important;
+		margin-top:0;
   	}
-	
 	.tiles {
 	  margin-right:0px;
 	}
 	.tiles.added-margin {
 	  margin-right:0px;
-	}
-	
-	.row-fluid [class*="span"]{
-		margin-bottom:10px;
-	}
-	
+	}	
+
 	.page-content .admin-bar .admin-bar-inner {
 		 margin-right: 0px;
 	}
 	.scrollup{
 		left: 235px;
 	}
+		
 }
 
 /* Landscape view of all tablet devices */
@@ -230,9 +239,13 @@ and (min-width : 1824px) {
   	/*** Page content ***/
   	.page-content { 
   		margin-left: 50px; 
-		margin-top: 58px;
+		margin-top: 0px;
 		min-height: 911px; 
 	}
+	.page-content .content{ 
+		padding-top: 95px;
+	}
+	
 	.inner-menu-layout .page-content{
 		margin-left:250px;
 	}
@@ -249,8 +262,9 @@ and (min-width : 1824px) {
 	}
 	
 	.table td.small-cell, .table th.small-cell{
-		width: 23px;
+		width: 40px;
 	}
+	
 } 
 
 /* Portrait view of all tablet devices */
@@ -282,7 +296,9 @@ and (orientation : portrait) {
 	.page-sidebar{
 		display:none;
 	}
-	
+	.page-content .content {
+		padding-top:95px;
+	}
 	.page-sidebar {
 	    position: fixed;
 		width: 260px;
@@ -363,7 +379,8 @@ and (orientation : portrait) {
 		margin:0px;
 	}
 	.page-content .content {
-		 padding:25px;
+		padding:25px;		 
+		padding-top:95px;
 	}
 	
 	.widget{
@@ -383,12 +400,8 @@ and (orientation : portrait) {
 	.row-fluid [class*="offset1"]{
 		margin-left:0px !important;
 	}
-	.column-seperation > div[class*="span"]{
+	.column-seperation > div[class*="col-"]{
 		border-right:none;		
-	}
-	
-	.container{
-		width:auto;	
 	}
 	
 	/** Profile Page **/	
@@ -402,7 +415,16 @@ and (orientation : portrait) {
 	/** Login Page **/
 	.login-container{
 		padding:0 10px;
-	}	
+	}
+	
+	.spacing-bottom-sm{
+		margin-bottom:20px;
+	}		
+	
+	.error-wrapper{
+		margin-bottom:0px;
+		 padding:auto;
+	}
 }
 
 @media (max-width: 767px) { 	
@@ -448,7 +470,6 @@ and (orientation : portrait) {
 	
 	.header-seperation{
 		width:100% !important;
-		position:fixed;
 		z-index:999;
 		text-align:center;
 		min-height:60px;
@@ -469,8 +490,8 @@ and (orientation : portrait) {
 	}
 	/*** Page content ***/
 	.page-content .content {
-		 padding:8px;
-		  padding-top:38px;
+		padding:8px;
+		padding-top:95px;
 	}
 	/*** Page title	***/
 	.page-title {
@@ -486,7 +507,6 @@ and (orientation : portrait) {
 		overflow-x: hidden;
 	}
 	
-
 	.form-horizontal .form-actions {
   		padding-left: 180px; 	
   	}
@@ -518,6 +538,17 @@ and (orientation : portrait) {
 		padding:0 10px;
 	}
 		
+	.table td.small-cell, .table th.small-cell{
+		width: 42px;
+	}
+	
+	.error-wrapper{
+		margin-bottom:0px;
+		min-height:624px;
+		height:624px;
+	}
+	
+		
 }
 /*** Phones ***/
 @media (max-width: 480px) {
@@ -527,7 +558,8 @@ and (orientation : portrait) {
 	}	
 	.page-content .content {
 		 padding:8px;
-		  padding-top:25px;
+		 padding-top:93px;
+		 overflow-x:hidden;
 	}
 	.page-sidebar{
 		overflow-x: hidden;
@@ -679,7 +711,12 @@ and (orientation : portrait) {
 	/** lockscreen **/
 	.lockscreen-wrapper .profile-wrapper{
 		margin-bottom:8px;
+	}	
+	
+	.row [class*="col-"]{
+		margin-bottom:10px;
 	}
+	
 }
 
 @media (max-width: 320px) {

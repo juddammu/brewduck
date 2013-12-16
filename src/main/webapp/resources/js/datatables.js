@@ -155,7 +155,7 @@ $(document).ready(function() {
 	var tableElement = $('#example');
 
     tableElement.dataTable( {
-		"sDom": "<'row-fluid'<'span6'l T><'span6'f>r>t<'row-fluid'<'span12'p i>>",
+		"sDom": "<'row'<'col-md-6'l T><'col-md-6'f>r>t<'row'<'col-md-12'p i>>",
 			"oTableTools": {
 			"aButtons": [
 				{
@@ -227,7 +227,7 @@ $(document).ready(function() {
      * Initialse DataTables, with no sorting on the 'details' column
      */
     var oTable = $('#example2').dataTable( {
-	   "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'p i>>",
+	   "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-12'p i>>",
        "aaSorting": [],
 				"oLanguage": {
 			"sLengthMenu": "_MENU_ ",
@@ -235,7 +235,7 @@ $(document).ready(function() {
 		},
     });
 	 var oTable3 = $('#example3').dataTable( {
-	   "sDom": "<'row-fluid'<'span6'l <'toolbar'>><'span6'f>r>t<'row-fluid'<'span12'p i>>",
+	   "sDom": "<'row'<'col-md-6'l <'toolbar'>><'col-md-6'f>r>t<'row'<'col-md-12'p i>>",
         			"oTableTools": {
 			"aButtons": [
 				{
