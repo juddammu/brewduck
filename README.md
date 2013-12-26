@@ -15,4 +15,6 @@ where brewers can share their own recipes.
 
 * project apply : <a href="https://www.facebook.com/groups/beer123/">here</a>
 
+* wiki : <a href="https://github.com/hukoru/brewduck/wiki">here</a>
+
 * This file was created by IntelliJ IDEA 12.1.5 for binding GitHub repository
