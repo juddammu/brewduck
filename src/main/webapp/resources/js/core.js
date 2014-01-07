@@ -61,7 +61,15 @@ $(document).ready(function() {
 	$(".bootstrap-tagsinput input").focus(function(){
 		$(this).parent().addClass('input-focus');		
 	})	
-//***********************************CHAT POPUP*****************************
+	
+	$('#my-task-list').popover({ 
+        html : true, 
+        content: function() {
+          return $('#notification-list').html();
+        }
+    });
+
+//*********************************** BEGIN CHAT POPUP*****************************
 	 $('.chat-menu-toggle').sidr({
 		name:'sidr',
 		side: 'right',
@@ -85,8 +93,9 @@ $(document).ready(function() {
 		$('.simple-chat-popup').addClass('animated fadeOut');		
 	},8000);
 	
+//*********************************** END CHAT POPUP*****************************	
 	
-//**********************************MAIN MENU********************************
+//**********************************BEGIN MAIN MENU********************************
 	jQuery('.page-sidebar li > a').on('click', function (e) {
             if ($(this).next().hasClass('sub-menu') == false) {
                 return;
@@ -114,7 +123,13 @@ $(document).ready(function() {
 
             e.preventDefault();
         });
+//**********************************END MAIN MENU********************************
 		
+//***********************************BEGIN Fixed Menu*****************************
+
+
+
+//***********************************BEGIN Grids*****************************		
 		 $('.grid .tools a.remove').on('click', function () {
             var removable = jQuery(this).parents(".grid");
             if (removable.next().hasClass('grid') || removable.prev().hasClass('grid')) {
@@ -146,7 +161,7 @@ $(document).ready(function() {
 		$('.user-info .collapse').on('click', function () {
             jQuery(this).parents(".user-info ").slideToggle();
 		});   
-		
+//***********************************END Grids*****************************				
 		var handleSidenarAndContentHeight = function () {
         var content = $('.page-content');
         var sidebar = $('.page-sidebar');
@@ -169,9 +184,8 @@ $(document).ready(function() {
 	 // $(e.target).prev('.accordion-heading').find('.accordion-toggle').removeClass('collapsed');
 	})
 
-	
-	//**** BEGIN Layout Readjust  ****//
-	//Break points for each exits and entering
+//***********************************BEGIN Layout Readjust *****************************		
+
 	$(window).setBreakpoints({
 		distinct: true, 
 		breakpoints: [
@@ -180,8 +194,7 @@ $(document).ready(function() {
 			768,
 			1024
 		] 
-	});   
-	
+	});   	
 	//Break point entry 
 	$(window).bind('enterBreakpoint320',function() {	
 		$('#main-menu-toggle-wrapper').show();		
@@ -235,8 +248,9 @@ $(document).ready(function() {
 		$('#header_inbox_bar').show();			
 		closeAndRestSider();
 	});
+//***********************************END Layout Readjust *****************************	
 
-	//Common Function calls
+//***********************************BEGIN Function calls *****************************	
 	function closeAndRestSider(){
 	  if($('#main-menu').attr('data-inner-menu')=='1'){
 		$('#main-menu').addClass("mini");	
@@ -259,7 +273,9 @@ $(document).ready(function() {
 				side: 'left'
 		});
 	}
-	
+//***********************************END Function calls *****************************	
+
+//***********************************BEGIN Main Menu Toggle *****************************	
 	$('#layout-condensed-toggle').click(function(){
 	  $.sidr('close', 'sidr');
 	 if($('#main-menu').attr('data-inner-menu')=='1'){
@@ -285,8 +301,9 @@ $(document).ready(function() {
 	  }
 	 }
 	});
-	//**** END Layout Readjust  ****//
+//***********************************END Main Menu Toggle *****************************	
 	
+//***********************************BEGIN Slimscroller *****************************		
 	$('.scroller').each(function () {
         $(this).slimScroll({
                 size: '7px',
@@ -297,14 +314,21 @@ $(document).ready(function() {
                 disableFadeOut: true
         });
     });
+//***********************************END Slimscroller *****************************	
+
+//***********************************BEGIN dropdow menu *****************************		
 	$('.dropdown-toggle').click(function () {
 		$("img").trigger("unveil");
 	});
-   
+//***********************************END dropdow menu *****************************	
+
+//***********************************BEGIN Global sparkline chart  *****************************	   
 	if ($.fn.sparkline) {
 		$('.sparklines').sparkline('html', { enableTagOptions: true });
 	}
+//***********************************END Global sparkline chart  *****************************	
 
+//***********************************BEGIN Function calls *****************************	
 	 $('table th .checkall').on('click', function () {
 			if($(this).is(':checked')){
 				$(this).closest('table').find(':checkbox').attr('checked', true);
@@ -316,7 +340,9 @@ $(document).ready(function() {
 				$(this).closest('table').find('tr').removeClass('row_selected');
 			}
     });
+//***********************************BEGIN Function calls *****************************	
 
+//***********************************BEGIN Function calls *****************************	
 	$('.animate-number').each(function(){
 		 $(this).animateNumbers($(this).attr("data-value"), true, parseInt($(this).attr("data-animation-duration")));	
 	})
@@ -324,8 +350,9 @@ $(document).ready(function() {
 		 $(this).css('width', $(this).attr("data-percentage"));
 		
 	})
-	
-	
+//***********************************BEGIN Function calls *****************************	
+
+//***********************************BEGIN Tiles Controller Options *****************************		
 	$('.controller .reload').click(function () { 
 		var el =$(this).parent().parent().parent();
 		blockUI(el);
@@ -355,8 +382,9 @@ $(document).ready(function() {
             forcePlaceholderSize: true,
             tolerance: 'pointer'
         });
+//***********************************BEGIN Function calls *****************************	
 
-	// wrapper function to  block element(indicate loading)
+//***********************************BEGIN Function calls *****************************	
     function blockUI(el) {		
             $(el).block({
                 message: '<div class="loading-animator"></div>',
@@ -389,7 +417,7 @@ $(document).ready(function() {
             $('.scrollup').fadeOut();
         }
     });
-	
+//***********************************BEGIN Function calls *****************************		
 	$('.scrollup').click(function(){
 		$("html, body").animate({ scrollTop: 0 }, 700);
 		return false;

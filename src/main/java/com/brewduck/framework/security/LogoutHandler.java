@@ -21,7 +21,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * @author bluepoet
+ * @author hukoru
  *
  */
 public class LogoutHandler extends SimpleUrlLogoutSuccessHandler {

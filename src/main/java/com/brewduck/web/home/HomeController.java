@@ -64,9 +64,19 @@ public class HomeController {
 
         model.addAttribute("account", account);
 
-        logger.warn("this is home page");
+        logger.warn("this is 12312312 page 13213");
 
         return "home";
+    }
+
+    @RequestMapping(value = "/sample", method = RequestMethod.GET)
+    public String sample(Model model,
+                       HttpServletRequest request) {
+        Account account = AuthenticationUtils.getUser();
+
+        model.addAttribute("account", account);
+
+        return "sample";
     }
 
     @RequestMapping(value = "/default", method = RequestMethod.GET)

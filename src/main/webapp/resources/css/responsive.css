@@ -34,7 +34,7 @@ and (min-width : 1824px) {
 	}
 	/** Only Demo Purpose **/
 	.demo-map{
-		min-height:920px;
+		min-height:100%;
 	}
 	
 	.error-main{
@@ -55,7 +55,9 @@ and (min-width : 1824px) {
 		width: 250px;
 		margin-top:58px;
   	}
-
+	.page-sidebar.fixed{
+		position: fixed;
+	}	
   	.page-sidebar ul{
   		width: 250px;
   	}
@@ -127,7 +129,9 @@ and (min-width : 1824px) {
 	}
 	.tiles.added-margin {
 	  margin-right:0px;
-	}	
+	}
+
+
 
 	.page-content .admin-bar .admin-bar-inner {
 		 margin-right: 0px;
@@ -202,7 +206,12 @@ and (min-width : 1824px) {
 	.page-sidebar >ul li span.arrow {
 		display:none;
 	}
-
+	.page-sidebar > ul li ul li span.title{
+		display:inline;
+	}
+	.page-sidebar >ul li  ul li span.arrow {
+		display:inline;
+	}
 	.page-sidebar > ul li span.badge  {
 		display:none;
 	}
@@ -226,7 +235,7 @@ and (min-width : 1824px) {
 		margin-top:-46px;
 		margin-left:50px;
 		width:auto;
-		z-index:999;
+		z-index:100;
 		min-width:250px;
 	}
 	

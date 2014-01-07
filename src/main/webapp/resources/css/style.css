@@ -29,6 +29,27 @@ Page header
 	border:none;
 	border-radius:0px;
 }
+.navbar .nav > li > .dropdown-menu::before {
+   position: absolute;
+   top: -7px;
+   right: 9px;
+   display: inline-block;
+   border-right: 7px solid transparent;
+   border-bottom: 7px solid #CCC;
+   border-left: 7px solid transparent;
+   border-bottom-color: rgba(0, 0, 0, 0.2);
+   content: '';
+ }
+ .navbar .nav > li > .dropdown-menu::after {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+    border-left: 6px solid transparent;
+    content: '';
+  }
 .header-seperation{
 	background-color:#22262e;
 	
@@ -90,6 +111,7 @@ Page sidebar
 	height:100%;
 	font-family: 'Open Sans';
 }
+
 .nav-collapse.collapse {
 	height:100%  !important;
 }	
@@ -197,12 +219,11 @@ Page sidebar
 .page-sidebar > ul > li > ul.sub-menu  li > ul.sub-menu > li > a:hover,
 .page-sidebar > ul > li > ul.sub-menu  li.open > a  {
   color: #fff !important;
-  background: #4b4b4b !important;  
 }
 
 .page-sidebar > ul > li > ul.sub-menu  a .arrow:before,
 .page-sidebar > ul > li > ul.sub-menu  a .arrow.open:before {  
-   color: #626262 !important;
+   color: #919091  !important;
 }
 .page-sidebar ul.folders{
 	list-style:none;
@@ -459,15 +480,15 @@ hr {
   border-bottom: 1px solid #FEFEFE;
 }
 /* Custom Icons and Sizes */
-.icon-5x {
+.fa-5x {
     font-size: 5em;
 }
 
-.icon-6x {
+.fa-6x {
     font-size: 6em;
 }
 
-.icon-7x {
+.fa-7x {
     font-size: 7em;
 }
 
@@ -484,6 +505,10 @@ hr {
 	height:4px;
 	margin-right:2px;
 	margin-bottom:8px;
+}
+
+span.iconset{
+   display:block
 }
 
 .iconset{
@@ -1029,7 +1054,7 @@ hr {
 .header .search-form{
 	display:inline-block; 
 	float:left;
-	margin-left:25px;
+	margin-left: 25px !important;
 	top: -4.5px; 
 	position:relative
 }
@@ -1226,6 +1251,7 @@ hr {
   list-style: none;
   clear: both;
   margin: 0px 0px 0px 0px;
+  padding-left:0
 }
 
 .page-sidebar > ul > li > ul.sub-menu  li > a > .arrow:before   {  
@@ -1262,7 +1288,6 @@ hr {
   background: none;
   margin: 0px;
   padding: 0px;
-  margin-top: 1px !important;
 }
 
 .page-sidebar > ul > li > ul.sub-menu  li > ul.sub-menu > li > a {
@@ -1272,13 +1297,12 @@ hr {
   color: #ccc;
   text-decoration: none;
   text-shadow: 0 1px 1px #000;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  background: none;
 }
 
 .page-sidebar > ul > li > ul.sub-menu > li > ul.sub-menu > li > a {  
-  padding-left: 60px;
+  padding-left: 70px;
 }
 
 .page-sidebar > ul > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu > li > a {  
@@ -1290,6 +1314,9 @@ hr {
 }
 
 /* Slider for iphone and tablets */
+.chat-window-wrapper{
+	overflow:hidden;
+}
 .sidr{
 	background-color:#22262e;
 	box-shadow:none;	
@@ -1317,10 +1344,10 @@ hr {
     width: 27px; height: 27px;
     position:fixed;
     bottom:92px;
-    left:235px;
+    left:65px;
     display:none;
     text-indent:-9999px;
-	z-index:10;   
+	z-index:101;   
 }
 .scrollup:hover{
 	background-position:-30px 0px; 
@@ -1330,7 +1357,7 @@ hr {
 }
 .footer-widget{
 	position:absolute;
-	bottom:1px;
+	bottom:0px;
 	display:block;
 	padding:11px 21px;
 	background-color:#22262e;
@@ -1425,6 +1452,13 @@ hr {
 	padding:10px;
 	border-radius:3px;
 }
+.chat-window-wrapper .chat-messages .user-details-wrapper{
+	padding:6px;
+}
+.chat-window-wrapper .chat-messages .user-details-wrapper:hover{
+	background-color:#22262e;
+	cursor:auto;
+}
 .chat-window-wrapper .user-details-wrapper .status-icon {
 	margin-right:0px;
 }
@@ -1474,7 +1508,38 @@ hr {
 	float:left;	
     margin-top:8px;
 }
+.chat-messages-header{
+	background-color:#1b1e24;
+	color:#4c5264;
+	padding:8px;
+	padding-left: 21px;
+}
+ .chat-messages-header .status{
+	height:10px;
+	width:10px;
+	border-radius:8px;
+	background-color:#e5e9ec;
+	display:inline-block;
+	margin-right:12px;
+}
+ .chat-messages-header .status.online{
+	background-color:#0aa699;
+ 
+ }
+.chat-messages-header .status.busy{
+	background-color:#f35958;
+ }
+ .chat-messages-header .status.away{
+	background-color:#0aa699;
+ }
+ .chat-messages-header a  > i{
+	color:#4c5264;
+	font-size:10px;
+	float:right;
+	margin-top: 5px;
+	margin-right: 5px;
 
+ }
 .chat-footer{
 	 position:absolute;
 	 bottom:0px;
@@ -1484,6 +1549,73 @@ hr {
 	width:92.6%;
 	
 }
+.bubble {
+	position: relative;
+	width: 165px;
+	min-height: 40px;
+	padding: 0px;
+	background: #e5e9ec;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color:#22262e;
+	padding:10px
+}
+.bubble {
+	cursor:pointer;
+}
+.bubble.old{
+	background: #0d0f12;
+	color:#4c5264;
+}
+.bubble.sender{
+	background: #0ba195;
+	color:#fff;
+}
+.chat-messages .sent_time{
+	width:100%;
+	color:#4c5264;
+	text-align:center;
+	margin-top:10px;
+	font-weight:600;
+}
+.chat-messages .sent_time.off{
+	display:none;
+}
+.bubble:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 9px 7px 9px 0;
+	border-color: transparent #e5e9ec;
+	display: block;
+	width: 0;
+	z-index: 1;
+	left: -7px;
+	top: 12px;
+}
+.bubble.old:after{
+	border-color: transparent #0d0f12;
+}
+.bubble.sender:after{
+	border-color: transparent #0ba195;
+	border-width: 9px 0 9px 7px;
+	right: -7px !important;
+	left: auto;
+}
+.chat-input-wrapper{
+	position: fixed;
+	bottom: 0;
+	background-color: #1b1e24;
+	width: 250px;
+	padding: 7px;
+}
+.chat-input-wrapper textarea{
+	background-color:#fff;
+	padding:0;
+	margin:0;
+}
+
 .user-chat-wrapper{
 	display:block;
 	padding:10px 15px; 
@@ -1567,10 +1699,15 @@ hr {
 .page-sidebar.mini ul li span.title{
 display:none;
 }
+.page-sidebar.mini ul li ul li span.title{
+display:inline;
+}
 .page-sidebar.mini ul li span.arrow {
 display:none;
 }
-
+.page-sidebar.mini ul li ul li span.arrow {
+display:inline;
+}
 .page-sidebar.mini ul li span.badge  {
 display:none;
 }
@@ -1747,6 +1884,7 @@ display:none;
   overflow:auto; 
   position:relative;
   min-height:911px;
+
 }
 .page-content.condensed-layout{  
 	margin-left:50px !important;
@@ -1845,9 +1983,11 @@ font-family: 'Open Sans';
   color:#515050;
   font-weight:300;
   text-shadow:none;
-  margin-right:10px;
-}
 
+}
+.page-content .breadcrumb a{
+	margin-left:10px;
+}
 .page-content .breadcrumb li p{
  font-size: 12.5px !important;
  font-weight:400;
@@ -1857,7 +1997,12 @@ font-family: 'Open Sans';
 	font-weight:600;
 	  font-size: 14px;
 }
-
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #515050;
+    font-family: FontAwesome;
+    content: "\f105";
+}
 .page-content .content{
 	padding-left: 26px;
 	padding-right: 26px;
@@ -2113,7 +2258,7 @@ textarea[class*="span"]
 
 .input-append .add-on > .halflings-icon,
 .input-prepend .add-on > i,
-.input-prepend .add-on > [class^="icon-"]
+.input-prepend .add-on > .fa
 {
 	margin-top: 5px;
 	margin-left: 3px;
@@ -2121,7 +2266,7 @@ textarea[class*="span"]
 
 .input-append .add-on > .halflings-icon
 .input-append .add-on > i,
-.input-append .add-on > [class^="icon-"]
+.input-append .add-on > .fa
 {
 	margin-top: 5px;
 	margin-left: 0px;
@@ -2974,11 +3119,6 @@ form legend,
   padding: 0px !important;
 }
 
-.grid-body .btn-group {
-  margin: 0px !important;
-  padding: 0px !important;
-  margin-bottom: 10px
-}
 
 /*  draggable girds */
 
@@ -3041,7 +3181,8 @@ form legend,
 /*** simple grid ***/
 
 .grid.simple {
-   padding:0px !important
+   padding:0px !important;
+   
    
 }
 .grid.simple .grid-title {  
@@ -3566,6 +3707,13 @@ div.DTTT_print_info p {
 	color:#fff;
 	position:relative;
 }
+.tiles .action-links{
+    margin:4px 0 0;
+    list-style:none;
+    font-size: 13px;
+    padding:0;
+}
+
 .tiles.added-margin{	
 	 margin-right:-10px;
 }
@@ -3580,6 +3728,20 @@ div.DTTT_print_info p {
 	font-family: 'Open Sans';
 	letter-spacing:0.5px;
 	font-weight:600;
+}
+
+.tiles  .tiles-title2{
+    font-family: 'NanumGothic';
+    font-size:24px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    margin-top: 10px;
+    padding: 0px 0px 30px 12px;
+    text-transform: none;
+    text-shadow: 1px 1px 2px #1b1e24;
 }
 
 .tiles .tiles-body{
@@ -4441,7 +4603,7 @@ code:hover{
 .the-icons a:hover{
 	text-decoration:none
 }
-.the-icons .span3 a:hover [class^="icon-"]:before, .the-icons .span3 a:hover [class*=" icon-"]:before {
+.the-icons  a:hover .fa, .the-icons  a:hover [class*="fa"] {
     font-size: 28px;
     vertical-align: -5px;
 }
@@ -5114,6 +5276,17 @@ box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11)!important;
 	border-radius: 3px;
 	background-color: #0090D9;
 	background-image: none;
+	-webkit-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+   -moz-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -ms-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+     -o-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
+-webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+   -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+     -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        transition-timing-function: cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
 }
 .progress-bar-success{
 	background-color: #0AA699;
@@ -6152,7 +6325,9 @@ input.error{
 }
 
 .user-comment-wrapper{
+    font-family: "NanumGothic";
 	display:block;
+    font-size: 10px;
 	margin-bottom:9px;
 	padding: 0 14px;
 }
@@ -6189,14 +6364,22 @@ input.error{
     display: flex;
 	
 }
+
+.user-comment-wrapper .comment .info-wrapper .more-details {
+    display: inline;
+    float: left;
+    position: relative;
+
+}
+
 .user-comment-wrapper .comment .preview-wrapper{
 	display:block;
 	color:#71798a;
 	font-size:12px;
-	 white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .user-comment-wrapper .comment .more-details{
@@ -6739,9 +6922,7 @@ table.fc-border-separate{
 	font-size: 12px;
 }
 .user-description-box p i{
-	margin-right: 10px;
-    text-align: right;
-    width: 32px;
+    width: 25px;
 	font-size: 14px;
 }
 .user-description-box p:last-child{
@@ -6808,6 +6989,8 @@ ul.my-friends li .profile-pic{
 	border-radius:none;
 	margin:0;
 }
+
+
 
 .post{
 	display:block;	
@@ -7160,6 +7343,9 @@ ul.my-friends li .profile-pic{
 	font-weight: 300;
 	text-indent: -2px;
 }
+#Parks ul{
+	padding-left:0;
+}
 /** Global Profile pics **/
 .user-profile img{
 	border-radius: 100px 100px 100px 100px;
@@ -7203,11 +7389,13 @@ ul.my-friends li .profile-pic{
 	font-size: 1.2em;
 	color: #505458;
 	margin-bottom:5px;
+	display:block;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime .time{
 	font-size: 1.5em;
 	color: #505458;
+	display:block;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {

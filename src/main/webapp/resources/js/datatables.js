@@ -45,8 +45,8 @@ $.extend( $.fn.dataTableExt.oPagination, {
 
 			$(nPaging).addClass('pagination').append(
 				'<ul>'+
-					'<li class="prev disabled"><a href="#"><i class="icon-chevron-left"></i></a></li>'+
-					'<li class="next disabled"><a href="#"><i class="icon-chevron-right"></i></a></li>'+
+					'<li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>'+
+					'<li class="next disabled"><a href="#"><i class="fa fa-chevron-right"></i></a></li>'+
 				'</ul>'
 			);
 			var els = $('a', nPaging);
@@ -160,7 +160,7 @@ $(document).ready(function() {
 			"aButtons": [
 				{
 					"sExtends":    "collection",
-					"sButtonText": "<i class='icon-cloud-download'></i>",
+					"sButtonText": "<i class='fa fa-cloud-download'></i>",
 					"aButtons":    [ "csv", "xls", "pdf", "copy"]
 				}
 			]
@@ -212,7 +212,7 @@ $(document).ready(function() {
      */
     var nCloneTh = document.createElement( 'th' );
     var nCloneTd = document.createElement( 'td' );
-    nCloneTd.innerHTML = '<i class="icon-plus-sign"></i>';
+    nCloneTd.innerHTML = '<i class="fa fa-plus-circle"></i>';
     nCloneTd.className = "center";
      
     $('#example2 thead tr').each( function () {
@@ -240,7 +240,7 @@ $(document).ready(function() {
 			"aButtons": [
 				{
 					"sExtends":    "collection",
-					"sButtonText": "<i class='icon-cloud-download'></i>",
+					"sButtonText": "<i class='fa fa-cloud-download'></i>",
 					"aButtons":    [ "csv", "xls", "pdf", "copy"]
 				}
 			]
@@ -276,15 +276,15 @@ $(document).ready(function() {
         if ( oTable.fnIsOpen(nTr) )
         {
             /* This row is already open - close it */
-			this.removeClass = "icon-plus-sign";
-            this.addClass = "icon-minus-sign";     
+			this.removeClass = "fa fa-plus-circle";
+            this.addClass = "fa fa-minus-circle";     
             oTable.fnClose( nTr );
         }
         else
         {
             /* Open this row */
-            this.removeClass = "icon-minus-sign";
-            this.addClass = "icon-plus-sign";  
+            this.removeClass = "fa fa-minus-circle";
+            this.addClass = "fa fa-plus-circle";  
             oTable.fnOpen( nTr, fnFormatDetails(oTable, nTr), 'details' );
         }
     });
