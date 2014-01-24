@@ -18,6 +18,7 @@
         <pattern>/help/faq</pattern>
         <pattern>/company/*</pattern>
         <pattern>/profile/*</pattern>
+        <pattern>/recipe/*</pattern>
         <pattern>/</pattern>
 	</decorator>
 

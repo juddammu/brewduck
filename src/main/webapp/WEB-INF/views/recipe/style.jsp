@@ -2,148 +2,466 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<script>
-    $(document).ready(function() {
-        $('.tip').tooltip();
-    });
-</script>
 
-<div class="content">
-<div class="page-title" style="display:none"> <a href="#" id="btn-back"><i class="icon-custom-left"></i></a>
-    <h3>뒤로가기 - <span class="semi-bold">Inbox</span></h3>
-</div>
-<div class="row-fluid"  id="inbox-wrapper">
-<div class="span12">
-<div class="row-fluid">
-<div class="span12">
-<div class="grid simple" >
-<div class="grid-body no-border email-body" style="min-height: 850px;">
-<br>
-<div class="row-fluid" >
-<div class="row-fluid dataTables_wrapper">
-    <h2 class="pull-left">스타일별
-        <div class="btn-group">
-            <a href="#" data-toggle="dropdown" class="btn btn-white btn-mini dropdown-toggle"><span class="caret single"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">메뉴1</a></li>
-                <li><a href="#">메뉴2</a></li>
-                <li><a href="#">메뉴3</a></li>
-                <li class="divider"></li>
-                <li><a href="#">메뉴4</a></li>
-            </ul>
-        </div></h2>
-</div>
-
-<div id="email-list">
-    <table class="table table-striped table-fixed-layout table-hover" id="emails" >
-    <thead>
-    <tr>
-        <th class="small-cell"></th>
-        <th class="small-cell"></th>
-        <th width="20%">이름</th>
-        <th width="6%" >
-            <button type="button" class="btn btn-white tip" data-toggle="tooltip" title="OG (Orignal Gravity) : 초기 비중" >OG</button>
-        </th>
-        <th width="6%">FG</th>
-        <th width="6%" data-hide="phone,tablet">IBU</th>
-        <th width="6%" data-hide="phone,tablet">°L</th>
-        <th width="6%" data-hide="phone,tablet">ABV</th>
-    </tr>
-    </thead>
-    <tbody>
-        <c:forEach var="result" items="${list}" varStatus="status">
-        <tr >
-            <td valign="middle" class="small-cell">
-                <div class="checkbox check-success ">
-                    <input id="checkbox8" type="checkbox" value="1" >
-                    <label for="checkbox8"></label>
-                </div>
-            </td>
-            <td valign="middle" class="small-cell">
-                <div class="star">
-                    <input id="checkbox9" type="checkbox" value="1" checked >
-                    <label for="checkbox9"></label>
-                </div>
-            </td>
-            <td valign="middle" class="clickable"><c:out value="${result.koreanName}"/> (<c:out value="${result.name}"/>)</td>
-            <td valign="middle" class="clickable tablefull"><c:out value="${result.ogMin}"/></td>
-            <td class="clickable tablefull"><span class="muted"><c:out value="${result.fgMin}"/> </span></td>
-            <td class="clickable tablefull"><span class="muted"><c:out value="${result.ibuMin}"/> </span></td>
-            <td class="clickable tablefull"><span class="muted"><c:out value="${result.ogMin}"/> </span></td>
-            <td class="clickable tablefull"><span class="muted"><c:out value="${result.abvMin}"/> </span></td>
-
-        </tr>
-        </c:forEach>
-    </tbody>
-    </table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row-fluid">
-    <div class="span12" id="preview-email-wrapper" style="display:none">
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="grid simple">
-                    <div class="grid-title no-border">
-                        <h4></h4>
-                        <div class="tools">
-                            <a href="javascript:;" class="remove"></a>
-                        </div>
-                    </div>
-                    <div class="grid-body no-border" style="min-height: 850px;">
-                        <div class="row-fluid" >
-                            <h1 id="emailheading">Meeting</h1>
-                            <br>
-                            <div class="control">
-                                <div class="pull-left">
-                                    <div class="btn-group">
-                                        <a href="#" data-toggle="dropdown" class="btn btn-mini dropdown-toggle">
-                                            David Nester
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Action</a></li>
-                                            <li><a href="#">Another action</a></li>
-                                            <li><a href="#">Something else here</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="#">Separated link</a></li>
-                                        </ul>
-                                    </div>
-                                    <label class="inline"><span class="muted">&nbsp;&nbsp;to</span> <span class="semi-bold small-text">johnsmith@skyace.com</span></label>
-                                </div>
-                                <div class="pull-right">
-                                    <span class="muted small-text">August 5 2013 11.30PM</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <br>
-                            <div class="email-body">
-                                <p>Thank you for taking the time to meet with me and other representatives of the last week regarding the challenges facing public transportation, especially. We enjoyed meeting with you and . I’m glad we had the opportunity to discuss an issue that affects so many people in [city/state/community]. We especially appreciate your commitment to [describe any commitment made by the official].
-                                    The [coalition name] believes that public transportation is vital to quality of life of our community. As we discussed …
-                                    Our coalition would greatly appreciate your support  in ensuring that public transportation is widely available to all who need it – especially the people living in . On behalf of all our members and the thousands of citizens they represent, I want to thank you for taking the time out of your busy schedule to discuss this important matter.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div id="main">
 
 
-<div class="clearfix"></div>
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Table</a></li>
+    <li class="active">Data Table</li>
+</ol>
+<!-- //breadcrumb-->
+
+<div id="content">
+
+<div class="row">
+
+<div class="col-lg-12">
+<section class="panel">
+<header class="panel-heading">
+    <h2><strong>스타일</strong> BJCP </h2>
+    <label class="color">60가지의 표준<em><strong> 스타일</strong></em>을 정의합니다. - BJCP 2008</label>
+</header>
+<div class="panel-tools fully color" align="right"  data-toolscolor="#6CC   3A0">
+    <ul class="tooltip-area">
+        <li><a href="javascript:void(0)" class="btn btn-reload"  title="리로딩"><i class="fa fa-retweet"></i></a></li>
+        <li><a href="javascript:void(0)" class="btn btn-add"  title="추가"><i class="fa fa-plus"></i></a></li>
+        <li><a href="javascript:void(0)" class="btn btn-reload"  title="출력"><i class="fa fa-print "></i></a></li>
+        <li><a href="javascript:void(0)" class="btn btn-close" title="Close"><i class="fa fa-times"></i></a></li>
+    </ul>
 </div>
-<div class="clearfix"></div>
-<div class="admin-bar" id="quick-access" style="display:">
-    <div class="admin-bar-inner">
-        <button class="btn btn-danger  btn-add" type="button"><i class="icon-trash"></i> Move to trash</button>
-        <button class="btn btn-white  btn-cancel" type="button">Cancel</button>
-    </div>
+<div class="panel-body">
+<form>
+<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="table-example">
+<thead>
+<tr>
+    <th>이름</th>
+    <th>비중</th>
+    <th>쓴맛</th>
+    <th>색상</th>
+    <th>알코올</th>
+</tr>
+</thead>
+<tbody align="center">
+<tr class="odd gradeX">
+    <td>Trident</td>
+    <td>Internet
+        Explorer 4.0</td>
+    <td>Win 95+</td>
+    <td class="center"> 4</td>
+    <td class="center">X</td>
+</tr>
+<tr class="even gradeC">
+    <td>Trident</td>
+    <td>Internet
+        Explorer 5.0</td>
+    <td>Win 95+</td>
+    <td class="center">5</td>
+    <td class="center">C</td>
+</tr>
+<tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet
+        Explorer 5.5</td>
+    <td>Win 95+</td>
+    <td class="center">5.5</td>
+    <td class="center">A</td>
+</tr>
+<tr class="even gradeA">
+    <td>Trident</td>
+    <td>Internet
+        Explorer 6</td>
+    <td>Win 98+</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+</tr>
+<tr class="odd gradeA">
+    <td>Trident</td>
+    <td>Internet Explorer 7</td>
+    <td>Win XP SP2+</td>
+    <td class="center">7</td>
+    <td class="center">A</td>
+</tr>
+<tr class="even gradeA">
+    <td>Trident</td>
+    <td>AOL browser (AOL desktop)</td>
+    <td>Win XP</td>
+    <td class="center">6</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 1.5</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 2.0</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Firefox 3.0</td>
+    <td>Win 2k+ / OSX.3+</td>
+    <td class="center">1.9</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Camino 1.0</td>
+    <td>OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Camino 1.5</td>
+    <td>OSX.3+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape 7.2</td>
+    <td>Win 95+ / Mac OS 8.6-9.2</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape Browser 8</td>
+    <td>Win 98SE+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Netscape Navigator 9</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.0</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.1</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.1</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.2</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.2</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.3</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.3</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.4</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.4</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.5</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.5</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.6</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">1.6</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.7</td>
+    <td>Win 98+ / OSX.1+</td>
+    <td class="center">1.7</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Mozilla 1.8</td>
+    <td>Win 98+ / OSX.1+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Seamonkey 1.1</td>
+    <td>Win 98+ / OSX.2+</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Gecko</td>
+    <td>Epiphany 2.20</td>
+    <td>Gnome</td>
+    <td class="center">1.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 1.2</td>
+    <td>OSX.3</td>
+    <td class="center">125.5</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 1.3</td>
+    <td>OSX.3</td>
+    <td class="center">312.8</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 2.0</td>
+    <td>OSX.4+</td>
+    <td class="center">419.3</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>Safari 3.0</td>
+    <td>OSX.4+</td>
+    <td class="center">522.1</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>OmniWeb 5.5</td>
+    <td>OSX.4+</td>
+    <td class="center">420</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>iPod Touch / iPhone</td>
+    <td>iPod</td>
+    <td class="center">420.1</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Webkit</td>
+    <td>S60</td>
+    <td>S60</td>
+    <td class="center">413</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 7.0</td>
+    <td>Win 95+ / OSX.1+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 7.5</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 8.0</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 8.5</td>
+    <td>Win 95+ / OSX.2+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.0</td>
+    <td>Win 95+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.2</td>
+    <td>Win 88+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera 9.5</td>
+    <td>Win 88+ / OSX.3+</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Opera for Wii</td>
+    <td>Wii</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Nokia N800</td>
+    <td>N800</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>Presto</td>
+    <td>Nintendo DS browser</td>
+    <td>Nintendo DS</td>
+    <td class="center">8.5</td>
+    <td class="center">C/A<sup>1</sup></td>
+</tr>
+<tr class="gradeC">
+    <td>KHTML</td>
+    <td>Konqureror 3.1</td>
+    <td>KDE 3.1</td>
+    <td class="center">3.1</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeA">
+    <td>KHTML</td>
+    <td>Konqureror 3.3</td>
+    <td>KDE 3.3</td>
+    <td class="center">3.3</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeA">
+    <td>KHTML</td>
+    <td>Konqureror 3.5</td>
+    <td>KDE 3.5</td>
+    <td class="center">3.5</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeX">
+    <td>Tasman</td>
+    <td>Internet Explorer 4.5</td>
+
+    <td>Mac OS 8-9</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+</tr>
+<tr class="gradeC">
+    <td>Tasman</td>
+    <td>Internet Explorer 5.1</td>
+    <td>Mac OS 7.6-9</td>
+    <td class="center">1</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeC">
+    <td>Tasman</td>
+    <td>Internet Explorer 5.2</td>
+    <td>Mac OS 8-X</td>
+    <td class="center">1</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeA">
+    <td>Misc</td>
+    <td>NetFront 3.1</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeA">
+    <td>Misc</td>
+    <td>NetFront 3.4</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">A</td>
+</tr>
+<tr class="gradeX">
+    <td>Misc</td>
+    <td>Dillo 0.8</td>
+    <td>Embedded devices</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+</tr>
+<tr class="gradeX">
+    <td>Misc</td>
+    <td>Links</td>
+    <td>Text only</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+</tr>
+<tr class="gradeX">
+    <td>Misc</td>
+    <td>Lynx</td>
+    <td>Text only</td>
+    <td class="center">-</td>
+    <td class="center">X</td>
+</tr>
+<tr class="gradeC">
+    <td>Misc</td>
+    <td>IE Mobile</td>
+    <td>Windows Mobile 6</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeC">
+    <td>Misc</td>
+    <td>PSP browser</td>
+    <td>PSP</td>
+    <td class="center">-</td>
+    <td class="center">C</td>
+</tr>
+<tr class="gradeU">
+    <td>Other browsers</td>
+    <td>All others</td>
+    <td>-</td>
+    <td class="center">-</td>
+    <td class="center">U</td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+</section>
+
 </div>
 
+</div>
+<!-- //content > row-->
+
+</div>
+<!-- //content-->
+
+
+</div>
+<!-- //main-->

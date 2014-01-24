@@ -1,223 +1,518 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <!DOCTYPE html>
-
+<html>
 <%@include file="/WEB-INF/views/common/include/default_header.jsp"%>
+<body>
+<div id="wrapper">
 
-<!-- 메인 시작 -->
-<body class="">
-
+<!-- 상단 메뉴바 -->
 <%@include file="/WEB-INF/views/common/include/default_topnavybar.jsp"%>
-<!-- BEGIN CONTAINER -->
-<div class="page-container row-fluid">
-<!-- BEGIN SIDEBAR -->
 
-<!-- BEGIN SIDEBAR -->
-<%@include file="/WEB-INF/views/common/include/default_left_mini_sidebar.jsp"%>
+<!-- 왼쪽 메뉴들 -->
+<%@include file="/WEB-INF/views/common/include/default_left_sidebar.jsp"%>
 
-<div class="inner-menu nav-collapse ">
-    <div class="inner-wrapper" >
-        <a href="send_email.html" class="btn btn-block btn-primary" ><span class="bold">모든 레시피</span></a>
 
-    </div>
-    <div class="inner-menu-content">
-        <p class="menu-title">검색 <span class="pull-right"><i class="icon-refresh"></i></span></p>
-    </div>
-    <ul class="big-items">
-        <li class="active"><span class="badge badge-important">2</span><a href="#" > 타입별</a></li>
-        <li><a href="sent.html">스타일별</a></li>
-        <li><a href="draft.html">속성별</a></li>
-        <li><a href="trash.html">재료별</a></li>
-        <li><a href="trash.html">레시피 이름으로</a></li>
-    </ul>
-    <ul class="small-items">
-        <li class=""><a href="#" > 브루덕이 추천하는</a></li>
-        <li><span class="badge badge-important">10</span><a href="#"> 겨울 맥주</a></li>
-    </ul>
-    <!--div class="inner-wrapper" >
-        <p class="menu-title">바로 가기</p>
-    </div>
-    <ul class="small-items">
-        <li class=""><a href="#"> Documents</a></li>
-        <li class=""><span class=" badge badge-disable ">203</span><a href="#"> Images</a></li>
-        <li class=""><a href="#"> Flagged</a></li>
-    </ul-->
-</div>
-<!-- END SIDEBAR -->
-<!-- BEGIN PAGE -->
-<div class="page-content">
-<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-<div id="portlet-config" class="modal hide">
+<!-- 메인 컨텐츠 -->
+<decorator:body />
+
+<!--  팝업창  -->
+<div id="md-messages" class="modal fade md-slideUp" tabindex="-1" data-width="450"  data-header-color="theme-inverse">
     <div class="modal-header">
-        <button data-dismiss="modal" class="close" type="button"></button>
-        <h3>Widget Settings</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title"><i class="fa fa-inbox"></i> Inbox messages</h4>
     </div>
-    <div class="modal-body"> Widget settings form goes here </div>
-</div>
-<div class="clearfix"></div>
-
-    <decorator:body />
-<!-- END PAGE -->
-</div>
-
-</div>
-<!-- BEGIN CHAT -->
-<div id="sidr">
-    <div class="chat-window-wrapper">
-        <div class="chat-header">
-            <div class="pull-left">
-                <input type="text" placeholder="search">
-            </div>
-            <div class="pull-right">
-                <a href="#" class="" ><div class="iconset top-settings-dark "></div> </a>
-            </div>
+    <!-- //modal-header-->
+    <div class="modal-body" style="padding:0">
+        <div class="widget-im">
+            <ul>
+                <li>
+                    <section  class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<i class="fa fa-paperclip"></i>
+																</span>
+																<span>
+																		<i class="fa fa-reply-all"></i>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-delete" data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o"></i></a>
+																</span>
+																<span>
+																		<time datetime="2013-11-16">1 : 52 am</time>
+																</span>
+                        </div>
+                        <h4><a href="javascript:void(0)">Edlado Holder</a>
+                        </h4>
+                        <div class="im-thumbnail"><img alt="" src="/resources//img/avatar2.png" /></div>
+                        <label></label>
+                        <div class="pre-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="yes">YES.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">NO.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section  class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<i class="fa fa-paperclip"></i>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-delete" data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o"></i></a>
+																</span>
+																<span>
+																		<time datetime="2013-11-16">12 : 00 pm</time>
+																</span>
+                        </div>
+                        <h4><a href="javascript:void(0)">Laine Fränchi</a>
+                        </h4>
+                        <div class="im-thumbnail"><i class="glyphicon glyphicon-user"></i></div>
+                        <div class="pre-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="yes">YES.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">NO.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<a href="javascript:void(0)" class="im-delete" data-toggle="tooltip" title="Delete"><i class="fa fa-trash-o"></i></a>
+																</span>
+																<span>
+																		<time datetime="2013-11-16">4 : 45 pm</time>
+																</span>
+                        </div>
+                        <h4><a href="javascript:void(0)">Cinda Collar</a>
+                        </h4>
+                        <div class="im-thumbnail"><img alt="" src="/resources//img/avatar.png" /></div>
+                        <label data-color="theme"></label>
+                        <div class="pre-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="yes">YES.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">NO.</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button class="btn btn-theme-inverse btn-block">View All inbox</button>
         </div>
-        <div class="side-widget">
-            <div class="side-widget-title">group chats</div>
-            <div class="side-widget-content">
-                <div id="groups-list">
-                    <ul class="groups" >
-                        <li><a href="#"><div class="status-icon green"></div>Office work</a></li>
-                        <li><a href="#"><div class="status-icon green"></div>Personal vibes</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="side-widget">
-            <div class="side-widget-title">favourites</div>
-            <div id="favourites-list">
-                <div class="side-widget-content" >
-                    <div class="user-details-wrapper active">
-                        <div class="user-profile">
-                            <img src="/resources/img/profiles/d.jpg" data-src="/resources/img/profiles/d.jpg" data-src-retina="/resources/img/profiles/d2x.jpg" width="35" height="35">
-                        </div>
-                        <div class="user-details">
-                            <div class="user-name">
-                                Jane Smith
-                            </div>
-                            <div class="user-more">
-                                Hello you there?
-                            </div>
-                        </div>
-                        <div class="user-details-status-wrapper">
-                            <span class="badge badge-important">3</span>
-                        </div>
-                        <div class="user-details-count-wrapper">
-                            <div class="status-icon green"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="user-details-wrapper">
-                        <div class="user-profile">
-                            <img src="/resources/img/profiles/c.jpg" data-src="/resources/img/profiles/c.jpg" data-src-retina="/resources/img/profiles/c2x.jpg" width="35" height="35">
-                        </div>
-                        <div class="user-details">
-                            <div class="user-name">
-                                David Nester
-                            </div>
-                            <div class="user-more">
-                                Busy, Do not disturb
-                            </div>
-                        </div>
-                        <div class="user-details-status-wrapper">
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="user-details-count-wrapper">
-                            <div class="status-icon red"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="side-widget">
-            <div class="side-widget-title">more friends</div>
-            <div class="side-widget-content" id="friends-list">
-                <div class="user-details-wrapper">
-                    <div class="user-profile">
-                        <img src="/resources/img/profiles/d.jpg" data-src="/resources/img/profiles/d.jpg" data-src-retina="/resources/img/profiles/d2x.jpg" width="35" height="35">
-                    </div>
-                    <div class="user-details">
-                        <div class="user-name">
-                            Jane Smith
-                        </div>
-                        <div class="user-more">
-                            Hello you there?
-                        </div>
-                    </div>
-                    <div class="user-details-status-wrapper">
-
-                    </div>
-                    <div class="user-details-count-wrapper">
-                        <div class="status-icon green"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="user-details-wrapper">
-                    <div class="user-profile">
-                        <img src="/resources/img/profiles/h.jpg" data-src="/resources/img/profiles/h.jpg" data-src-retina="/resources/img/profiles/h2x.jpg" width="35" height="35">
-                    </div>
-                    <div class="user-details">
-                        <div class="user-name">
-                            David Nester
-                        </div>
-                        <div class="user-more">
-                            Busy, Do not disturb
-                        </div>
-                    </div>
-                    <div class="user-details-status-wrapper">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="user-details-count-wrapper">
-                        <div class="status-icon red"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="user-details-wrapper">
-                    <div class="user-profile">
-                        <img src="/resources/img/profiles/c.jpg" data-src="/resources/img/profiles/c.jpg" data-src-retina="/resources/img/profiles/c2x.jpg" width="35" height="35">
-                    </div>
-                    <div class="user-details">
-                        <div class="user-name">
-                            Jane Smith
-                        </div>
-                        <div class="user-more">
-                            Hello you there?
-                        </div>
-                    </div>
-                    <div class="user-details-status-wrapper">
-
-                    </div>
-                    <div class="user-details-count-wrapper">
-                        <div class="status-icon green"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="user-details-wrapper">
-                    <div class="user-profile">
-                        <img src="/resources/img/profiles/h.jpg" data-src="/resources/img/profiles/h.jpg" data-src-retina="/resources/img/profiles/h2x.jpg" width="35" height="35">
-                    </div>
-                    <div class="user-details">
-                        <div class="user-name">
-                            David Nester
-                        </div>
-                        <div class="user-more">
-                            Busy, Do not disturb
-                        </div>
-                    </div>
-                    <div class="user-details-status-wrapper">
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="user-details-count-wrapper">
-                        <div class="status-icon red"></div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
+        <!-- //widget-im-->
     </div>
+    <!-- //modal-body-->
 </div>
-<!-- END CHAT -->
 
+<!--
+//////////////////////////////////////////////////////////////////////////
+//////////     MODAL NOTIFICATION     //////////
+//////////////////////////////////////////////////////////////////////
+-->
+<div id="md-notification" class="modal fade md-stickTop" tabindex="-1" data-width="500"  data-header-color="danger">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-angle-double-up"></i></button>
+        <h4 class="modal-title"><i class="fa fa-bell-o"></i> Notification</h4>
+    </div>
+    <!-- //modal-header-->
+    <div class="modal-body" style="padding:0">
+        <div class="widget-im notification">
+            <ul>
+                <li>
+                    <section class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<time class="timeago lasted" datetime="2014">when you opened the page</time>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
+																</span>
+                        </div>
+                        <h4>Your request approved</h4>
+                        <div class="im-thumbnail" data-color="theme-inverse"><i class="fa fa-check"></i></div>
+                        <div class="pre-text">One Button (click to remove this)</div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<time class="timeago" datetime="2013-11-17T14:24:17Z">timeago</time>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
+																</span>
+                        </div>
+                        <h4>Dashboard new design!! you want to see now ? </h4>
+                        <div class="im-thumbnail" data-color="theme"><i class="fa fa-bell-o"></i></div>
+                        <div class="pre-text">Two Button (with link and click to close this) Lorem ipsum dolor sit amet, consectetur adipisicing elit, </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse" href="dashboard.html">Go Now.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">Later.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<time class="timeago" datetime="2013-11-17T01:24:17Z">timeago</time>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
+																</span>
+                        </div>
+                        <h4>Error 404 <small>( File not  found )</small></h4>
+                        <div class="im-thumbnail" data-color="warning"><i class="fa fa-exclamation-triangle"></i></div>
+                        <div class="pre-text">Two Button (click to  action and remove) </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="accept">Accept.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="actionNow">Fixed now.</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <section class="thumbnail-in">
+                        <div class="widget-im-tools tooltip-area pull-right">
+																<span>
+																		<time class="timeago" datetime="2013-09-17T09:24:17Z">timeago</time>
+																</span>
+																<span>
+																		<a href="javascript:void(0)" class="im-action" data-toggle="tooltip" data-placement="left" title="Action"><i class="fa fa-keyboard-o"></i></a>
+																</span>
+                        </div>
+                        <h4>Upgrade Premium ?</h4>
+                        <div class="im-thumbnail" data-color="inverse">
+                            <i class="fa fa-cogs"></i></div>
+                        <div class="pre-text"> Three button (test action) </div>
+                    </section>
+                    <div class="im-confirm-group">
+                        <div class=" btn-group btn-group-justified">
+                            <a class="btn btn-inverse im-confirm" href="javascript:void(0)" data-confirm="actionNow">Now.</a>
+                            <a class="btn btn-theme im-confirm" href="javascript:void(0)" data-confirm="no">Later.</a>
+                            <a class="btn btn-danger im-confirm" href="javascript:void(0)" data-confirm="yes">Delete.</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- //widget-im-->
+    </div>
+    <!-- //modal-body-->
+</div>
+<!-- //modal-->
+
+
+
+<!-- 왼쪽 네비게이션 메뉴 -->
+<%@include file="/WEB-INF/views/common/include/default_left_nav_menu.jsp"%>
+<!-- //nav left menu-->
+
+
+<!--
+/////////////////////////////////////////////////////////////////
+//////////     RIGHT NAV MENU     //////////
+/////////////////////////////////////////////////////////////
+-->
+<nav id="contact-right">
+<ul>
+<li>
+    <span>Friends</span>
+    <ul>
+        <li class="Label">A</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/1.jpg" /> Alexa
+                <small>Johnson</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/2.jpg" /> Alexander
+                <small>Brown</small>
+            </a>
+        </li>
+        <li class="Label">F</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/3.jpg" /> Fred
+                <small>Smith</small>
+            </a>
+        </li>
+        <li class="Label">J</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/4.jpg" /> James
+                <small>Miller</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/5.jpg" /> Jefferson
+                <small>Jackson</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/6.jpg" /> Jordan
+                <small>Lee</small>
+            </a>
+        </li>
+        <li class="Label">K</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/7.jpg" /> Kim
+                <small>Adams</small>
+            </a>
+        </li>
+        <li class="Label">M</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/8.jpg" /> Meagan
+                <small>Miller</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/9.jpg" /> Melissa
+                <small>Johnson</small>
+            </a>
+        </li>
+        <li class="Label">N</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/10.jpg" /> Nicole
+                <small>Smith</small>
+            </a>
+        </li>
+        <li class="Label">S</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/1.jpg" /> Samantha
+                <small>Harris</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="block">
+                <img alt="" src="/resources//photos_preview/50/people/2.jpg" /> Scott
+                <small>Thompson</small>
+            </a>
+        </li>
+    </ul>
+</li>
+<li>
+    <span>Family</span>
+    <ul>
+        <li class="Label">A</li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/3.jpg" /> Adam
+                <small>White</small>
+            </a>
+        </li>
+        <li class="Label">B</li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/4.jpg" /> Ben
+                <small>Robinson</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/5.jpg" /> Bruce
+                <small>Lee</small>
+            </a>
+        </li>
+        <li class="Label">E</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/6.jpg" /> Eddie
+                <small>Williams</small>
+            </a>
+        </li>
+        <li class="Label">J</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/7.jpg" /> Jack
+                <small>Johnson</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/8.jpg" /> John
+                <small>Jackman</small>
+            </a>
+        </li>
+        <li class="Label">M</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/9.jpg" /> Martina
+                <small>Thompson</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/10.jpg" /> Matthew
+                <small>Watson</small>
+            </a>
+        </li>
+        <li class="Label">O</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/1.jpg" /> Olivia
+                <small>Taylor</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/2.jpg" /> Owen
+                <small>Wilson</small>
+            </a>
+        </li>
+    </ul>
+</li>
+<li>
+								<span>
+										Work colleagues
+								</span>
+    <ul>
+        <li class="Label">D</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/3.jpg" /> David
+                <small>Harris</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/4.jpg" /> Dennis
+                <small>King</small>
+            </a>
+        </li>
+        <li class="Label">E</li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/5.jpg" /> Eliza
+                <small>Walker</small>
+            </a>
+        </li>
+        <li class="Label">L</li>
+        <li class="img">
+            <a href="#" class="busy">
+                <img alt="" src="/resources//photos_preview/50/people/6.jpg" /> Larry
+                <small>Turner</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/7.jpg" /> Lisa<br />
+                <small>Wilson</small>
+            </a>
+        </li>
+        <li class="Label">M</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/8.jpg" /> Michael
+                <small>Jordan</small>
+            </a>
+        </li>
+        <li class="Label">R</li>
+        <li class="img">
+            <a href="#">
+                <img alt="" src="/resources//photos_preview/50/people/9.jpg" /> Rachelle
+                <small>Cooper</small>
+            </a>
+        </li>
+        <li class="img">
+            <a href="#" class="online">
+                <img alt="" src="/resources//photos_preview/50/people/10.jpg" /> Rick
+                <small>James</small>
+            </a>
+        </li>
+    </ul>
+</li>
+</ul>
+</nav>
+<!-- //nav right menu-->
+
+
+</div>
+<!-- //wrapper-->
+
+
+<!--
+////////////////////////////////////////////////////////////////////////
+//////////     JAVASCRIPT  LIBRARY     //////////
+/////////////////////////////////////////////////////////////////////
+-->
+
+<!-- Jquery Library -->
+<script type="text/javascript" src="/resources//js/jquery.min.js"></script>
+<script type="text/javascript" src="/resources//js/jquery.ui.min.js"></script>
+<script type="text/javascript" src="/resources//plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Modernizr Library For HTML5 And CSS3 -->
+<script type="text/javascript" src="/resources//js/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="/resources//plugins/mmenu/jquery.mmenu.js"></script>
+<!-- Holder Images -->
+<script type="text/javascript" src="/resources//plugins/holder/holder.js"></script>
+<!-- Form plugins -->
+<script type="text/javascript" src="/resources//plugins/form/form.js"></script>
+<!-- Datetime plugins -->
+<script type="text/javascript" src="/resources//plugins/datetime/datetime.js"></script>
+<!-- Library Chart-->
+<script type="text/javascript" src="/resources//plugins/chart/chart.js"></script>
+<!-- Library Themes Customize-->
+<script type="text/javascript" src="/resources//js/caplet.custom.js"></script>
+<!-- Library datable -->
+<script type="text/javascript" src="/resources//plugins/datable/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/resources//plugins/datable/dataTables.bootstrap.js"></script>
+<script type="text/javascript">
+
+    function fnShowHide( iCol , table){
+        var oTable = $(table).dataTable();
+        var bVis = oTable.fnSettings().aoColumns[iCol].bVisible;
+        oTable.fnSetColumnVis( iCol, bVis ? false : true );
+    }
+
+    $(function() {
+
+        //////////     DATA TABLE  COLUMN TOGGLE    //////////
+        $('[data-table="table-toggle-column"]').each(function(i) {
+            var data=$(this).data(),
+                    table=$(this).data("table-target"),
+                    dropdown=$(this).parent().find(".dropdown-menu"),
+                    col=new Array;
+            $(table).find("thead th").each(function(i) {
+                $("<li><a  class='toggle-column' href='javascript:void(0)' onclick=fnShowHide("+i+",'"+table+"') ><i class='fa fa-check'></i> "+$(this).text()+"</a></li>").appendTo(dropdown);
+            });
+        });
+
+        //////////     COLUMN  TOGGLE     //////////
+        $("a.toggle-column").on('click',function(){
+            $(this).toggleClass( "toggle-column-hide" );
+            $(this).find('.fa').toggleClass( "fa-times" );
+        });
+
+        // Call dataTable in this page only
+        $('#table-example').dataTable();
+        $('table[data-provide="data-table"]').dataTable();
+    });
+</script>
 </body>
 </html>
