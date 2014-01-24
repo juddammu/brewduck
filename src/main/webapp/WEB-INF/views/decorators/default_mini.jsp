@@ -224,7 +224,6 @@
 <%@include file="/WEB-INF/views/common/include/default_left_nav_menu.jsp"%>
 <!-- //nav left menu-->
 
-
 <!--
 /////////////////////////////////////////////////////////////////
 //////////     RIGHT NAV MENU     //////////
