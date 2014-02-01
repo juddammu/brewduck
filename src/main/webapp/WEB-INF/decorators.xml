@@ -9,7 +9,7 @@
 	</excludes>
 
 	<decorator name="guest" page="guest.jsp">
-        <pattern>/account/loginPopup</pattern>
+        <pattern>/account/*</pattern>
 	</decorator>
 
 	<decorator name="default" page="default.jsp">

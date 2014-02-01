@@ -104,7 +104,7 @@ public class AccountServiceImpl implements AccountService {
                     MailService mailService = new MailService();
                     result = mailService.sendMail(
                                     account.getEmail(),
-                                    "[나누다뮤직] 회원 가입을 축하드립니다.",
+                                    "[브루덕] 회원 가입을 축하드립니다.",
                                     authKey
                                 );
 

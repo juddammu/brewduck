@@ -13,7 +13,7 @@ import java.text.DecimalFormat;
  * @author ferenc.hechler
  */
 public class SimpleCrypto {
-    public static String seed = "nanooda07";
+    public static String seed = "brewduck";
 
     public static String encrypt(String seed, String cleartext) throws Exception {
         byte[] rawKey = getRawKey(seed.getBytes());
@@ -91,7 +91,7 @@ public class SimpleCrypto {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        String cleartext = "12345678";
+        String cleartext = "glasowk1225";
 
         String encrypt = encrypt(seed, cleartext);
         System.out.println("암호화 : " + encrypt);

@@ -51,9 +51,8 @@ public class MailService {
         html.append("</tr>");
         html.append("<tr>");
         html.append("<td style='font-family:'나눔고딕', NanumGothic, NanumGothicWeb, Helvetica, sans-serif;font-size:13px;color:#8a8a8a;line-height:20px;'>");
-        html.append("<p style='font-size:18px;line-height:21px;color:#222222;'>나누다뮤직 회원이 되신 것을 진심으로 환영합니다.</p>");
-        html.append("<p style=''>좋은 음악재능을 공유하고, 즐겁게 나누다뮤직을 이용하실 수 있도록 최선을 다해 노력하겠습니다.");
-        html.append("        아래의 이메일인증을 클릭하여 주세요.</p>");
+        html.append("<p style='font-size:18px;line-height:21px;color:#222222;'>브루덕 회원이 되신 것을 진심으로 환영합니다.</p>");
+        html.append("<p style=''>아래의 이메일인증을 클릭하여 주세요.</p>");
         html.append("<p style='text-align:center; padding-top:20px;'><a href='http://nanooda01.cafe24.com/account/activation/" + authKey);
         html.append("' target='_blank' style='background:#ff6126;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; padding:10px 20px; color:#fff;text-decoration:none;font-weight:bold;'>이메일 인증</a></p>");
         html.append("</td>");
@@ -77,7 +76,7 @@ public class MailService {
         html.append("<tbody>");
         html.append("<tr>");
         html.append("<td style='font-family:'나눔고딕', NanumGothic, NanumGothicWeb, Helvetica, sans-serif;font-size:13px;color:#8a8a8a;line-height:20px;text-align:left;'>");
-        html.append("<p>감사합니다.<br />나누다뮤직팀</p>");
+        html.append("<p>감사합니다.<br />브루덕팀</p>");
         html.append("</td>");
         html.append("</tr>");
         html.append("</tbody>");
@@ -97,7 +96,7 @@ public class MailService {
         html.append("<tbody>");
         html.append("<tr>");
         html.append("<td style='font-family:'나눔고딕', NanumGothic, NanumGothicWeb, Helvetica, sans-serif;font-size:11px;line-height:18px;color:#8a8a8a;text-align:center;padding:0;'>");
-        html.append("<p style=''>본 메일은 수신을 동의한 나누다뮤직 회원에게 발송됩니다.<br />");
+        html.append("<p style=''>본 메일은 수신을 동의한 브루덕 회원에게 발송됩니다.<br />");
         html.append("        발신전용이므로 문의사항은 <a href='#'>고객센터</a>를 이용해주세요.<br />");
         html.append("©NANOODA, Inc.</p>");
         html.append("</td> ");
@@ -134,9 +133,9 @@ public class MailService {
         // TODO : 향후에 외부 설정으로 빠져야 함.
         String smtpHost = "smtp.gmail.com";
         String smtpPort = "587";    // TLS 포트 번호
-        String password = "nanooda07";
-        String sendEmail = "nanoodamusic@nanooda.com";
-        String sendPassword = "791E12C5C1B9E5CF2ACA48E6DB79661E";
+        String password = "glasowk1225";
+        String sendEmail = "help@brewduck.com";
+        String sendPassword = "D90A6EF4755C4CF1C6BDFF70F15F61EC";
 
         String charset = "UTF-8";
 

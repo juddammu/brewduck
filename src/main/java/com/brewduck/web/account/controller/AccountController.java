@@ -58,14 +58,14 @@ public class AccountController {
      *
      * @return
      */
-    @RequestMapping(value = "/signin", method = RequestMethod.GET)
+    @RequestMapping(value = "/signup", method = RequestMethod.GET)
     public String signin(Model model,
                          HttpServletRequest request) {
         logger.debug("회원 가입 페이지");
         Account account = new Account();
         model.addAttribute("account", account);
 
-        return "account/signin";
+        return "account/signup";
     }
 
     /**
@@ -80,10 +80,13 @@ public class AccountController {
     public String join(@ModelAttribute @Valid Account account,
                        BindingResult result,
                        Model model) {
+
+        System.out.println("@@@@@@@@@@@ 회원 가입 ");
+
         // 필수값 미입력시 가입 페이지로 전환
         if (result.hasErrors()) {
             logger.debug("가입 실패 : " + account.toString());
-            return "account/signin";
+            return "account/signup";
         }
 
         int insertCount = accountService.insertAccount(account);
@@ -100,20 +103,6 @@ public class AccountController {
             model.addAttribute("message", "회원 가입 중 저장이 실패하였습니다.");
             return "account/signin";
         }
-
-        // TODO -> 회원 가입 후 브라우저 URL 주소 변환 안되고 있어서 수정 필요
-        // 1. RedirectAttributes
-        // redirectAttributes.addFlashAttribute("account", account);
-
-        // 2.1 RequestContextUtils를 이용하여 FlashMap에 "message" 값을 저장
-        // FlashMap fm = RequestContextUtils.getOutputFlashMap(request);
-        // fm.put("message", "update successed");
-
-        // 2.2 FlashMap에 저장된 message 값을 꺼내옴
-        // Map<String, ?> fm = RequestContextUtils.getInputFlashMap(request);
-        // if (fm != null) {
-        //    String message = (String) fm.get("message");
-        // }
 
         return "redirect:/account/confirm";
     }

@@ -38,22 +38,15 @@
 
     <insert id="Account.insertAccount"
             parameterType="Account">
-        <selectKey keyProperty="id"
-                   resultType="int"
-                   order="BEFORE">
-            select SEQ_ACCOUNT.NEXTVAL from dual
-        </selectKey>
         <!-- 회원 가입 -->
         INSERT INTO account (
-             id
-            ,name
+             name
             ,email
             ,password
             ,authority
             ,activation
         ) values (
-             #{id}
-            ,#{name}
+             #{name}
             ,#{email}
             ,#{password}
             ,'ROLE_SIGNIN'
